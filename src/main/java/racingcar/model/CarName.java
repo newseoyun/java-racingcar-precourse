@@ -21,4 +21,8 @@ public class CarName {
     private boolean isValidLength(String name) {
         return name.length() > Constraint.MAX_CAR_NAME_LENGTH;
     }
+
+    public String getName() {
+        return name;
+    }
 }

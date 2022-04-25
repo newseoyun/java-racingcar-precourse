@@ -1,5 +1,8 @@
 package racingcar.view;
 
+import java.util.Collections;
+import racingcar.model.Car;
+
 public class Printer {
 
     private static final String CAR_NAME_INFO = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
@@ -22,6 +25,11 @@ public class Printer {
 
     public void printWinner(String winners) {
         System.out.print(WINNER_INFO + winners);
+    }
+
+    public void printResult(Car car) {
+        String positionView = String.join("", Collections.nCopies(car.getPosition(), "-"));
+        System.out.println(car.getName() + " : " + positionView);
     }
 
 }

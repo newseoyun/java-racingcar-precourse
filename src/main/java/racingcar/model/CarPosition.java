@@ -1,5 +1,7 @@
 package racingcar.model;
 
+import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.constraint.Constraint;
 import racingcar.exception.ErrorCode;
 
 public class CarPosition {
@@ -24,13 +26,4 @@ public class CarPosition {
         return power >= 4;
     }
 
-    private void validateRange(int tryCount) {
-        if (isValidRange(tryCount)) {
-            throw new IllegalArgumentException(ErrorCode.NUMBER_RANGE_EX.getMessage());
-        }
-    }
-
-    private boolean isValidRange(int tryCount) {
-        return tryCount > 100 || tryCount < 1;
-    }
 }
